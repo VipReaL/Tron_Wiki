@@ -1,13 +1,13 @@
 @font-face {
   font-display: swap;
   font-family: 'Oswald';
-  src: url(/fonts/Oswald-VariableFont_wght.ttf);
+  src: url(fonts/Oswald-VariableFont_wght.ttf);
   font-weight: 200 700;
 }
 
 @font-face {
   font-family: 'Tr2n';
-  src: url(/fonts/Tr2n.ttf);
+  src: url(fonts/Tr2n.ttf);
 }
 
 .container {
@@ -26,7 +26,7 @@
   color: white;
 
   background-color: #020408;
-  background-image: url(/images/bg.webp);
+  background-image: url(images/bg.webp);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
