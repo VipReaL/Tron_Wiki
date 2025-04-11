@@ -1,0 +1,121 @@
+.nav {
+padding-block: 20px;
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list_flex {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav__link {
+  display: block;
+  padding-bottom: 20px;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: clamp(0.55rem, 2vw + 0.25rem, 2rem);
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: #8CFFFF;
+  user-select: none;
+  transition: text-shadow .6s;
+}
+
+.nav__link:hover {
+  text-shadow: 
+    0 0 7px #8CFFFF,
+    0 0 10px #8CFFFF,
+    0 0 21px #8CFFFF,
+    0 0 42px #6DE0E9,
+    0 0 82px #44B0BF,
+    0 0 92px #238495,
+    0 0 102px #3EA6C4,
+    0 0 151px #01455A; 
+}
+
+.logo {
+  font-family: 'Tr2n';
+  font-size: 80px;
+  font-weight: 200;
+  font-style: normal;
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.6s;
+}
+
+.logo:hover {
+  color: red;
+}
+
+.neonText {
+  color: #8CFFFF;
+  animation: 2s neon alternate-reverse infinite;
+}
+
+@keyframes neon {
+  from {
+      text-shadow: 
+      0 0 7px #8CFFFF,
+      0 0 10px #8CFFFF,
+      0 0 21px #8CFFFF,
+      0 0 42px #6DE0E9,
+      0 0 82px #44B0BF,
+      0 0 92px #238495,
+      0 0 102px #3EA6C4,
+      0 0 151px #01455A;
+  }
+  to {
+      text-shadow: 
+      0 0 10px #8CFFFF,
+      0 0 15px #8CFFFF,
+      0 0 26px #8CFFFF,
+      0 0 48px #6DE0E9,
+      0 0 87px #44B0BF,
+      0 0 97px #238495,
+      0 0 107px #3EA6C4,
+      0 0 156px #01455A;
+  }
+}
+
+/* dropmenu start */
+
+.dropmenu {
+  display: none;
+}
+
+.nav__item_dropmenu {
+  position: relative;
+}
+
+.nav__item:hover .dropmenu {
+  display: block;
+  position: absolute;
+}
+
+.nav__link_dropmenu::after {
+  content: url(/images/triangledown.svg);
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -4px;
+  right: -15px;
+  transform-origin: 50% 320%;
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease;
+}
+
+.nav__item:hover .nav__link_dropmenu::after {
+  transform: rotateZ(180deg);
+  transform-origin: 50% 320%;
+}
+
+/* dropmenu end */
