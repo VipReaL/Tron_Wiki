@@ -1,21 +1,12 @@
-.timeLine {
+.container__timeline {
   position: relative;
 }
 
-/* .main-container {
-  margin-top: 20px;
-  width: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-} */
-
-/* center-line start */
-
+/* центральная линия start */
 .center-line {
   position: absolute;
   left: 50%;
-  height: 1200px;
+  height: 100%;
   width: 4px;
   display: flex;
   align-items: center;
@@ -47,128 +38,160 @@
   border: 4px solid #8CFFFF;
 }
 
-/* center-line end */
+/* центральная линия end */
 
+/* позиционирование карточки starrt */
 .card {
+  position: relative;
   display: block;
   width: 300px;
   height: 200px;
-  /* border-radius: 10px; */
-  /* background-color: white; */
-  margin-bottom: 50px;
-
-  font-size: .8rem;
   text-decoration: none;
+  margin-bottom: 50px;
 }
 
-.left {
-  position: relative;
+.card:nth-of-type(odd) {
   left: -250px;
 }
 
-.right {
-  position: relative;
+.card:nth-of-type(even) {
   left: 250px;
 }
 
-/* горизонтальная палка start */
+/* позиционирование карточки end */
 
-.left::after,
-.right::after {
+/* горизонтальная палка start */
+.card:nth-of-type(odd)::after,
+.card:nth-of-type(even)::after {
   content: '';
   position: absolute;
   width: 100px;
-  height: 4px;
+  height: 2px;
   background-color: #8CFFFF;
-  z-index: -1;
 }
 
-.left::after {
+.card:nth-of-type(odd)::after {
   top: 21px;
   right: -100px;
 }
 
-.right::after {
+.card:nth-of-type(even)::after {
   top: 21px;
   left: -100px;
 }
 
 /* горизонтальная палка end */
 
-.card h2 {
-  margin: 0;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px 10px 0 0;
-  color: white;
-  background-color: #8CFFFF;
-}
-
-.card img {
-  width: 100%;
-}
-
 /* точка start */
-
-.thumbnail {
+.card:nth-of-type(odd)::before,
+.card:nth-of-type(even)::before {
+  content: '';
   position: absolute;
-  top: 15px;
   width: 15px;
   height: 15px;
   border-radius: 50%;
   background-color: #8CFFFF;
 }
 
-.left .thumbnail {
-  left: 131%;
+.card:nth-of-type(odd)::before {
+  top: 16px;
+  right: -107px;
 }
 
-.right .thumbnail {
-  right: 131%;
+.card:nth-of-type(even)::before {
+  top: 16px;
+  left: -107px;
 }
 
 /* точка end */
 
+.heading {
+  font-size: 1rem;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px 10px 0 0;
+  color: red;
+  background-color: #8CFFFF;
+}
+
+.time {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.card:nth-of-type(odd) .time {
+  right: -65px;
+}
+
+.card:nth-of-type(even) .time {
+  left: -65px;
+}
+
+.caption {
+  background: rgba(140, 255, 255, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(140, 255, 255, 0.2);
+
+  position: absolute;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0;
+  padding: 1px 5px 5px 5px;
+
+  color: white;
+  text-transform: lowercase;
+  font-size: 18px;
+}
+
+.card img {
+  width: 100%;
+}
+
 @media screen and (max-width:790px) {
   body {
-      text-align: center;
-      padding: 0 10px;
-  }
-
-  .main-container {
-      width: auto;
+    text-align: center;
+    padding: 0 10px;
   }
 
   .center-line {
-      height: 1550px;
+    height: 1550px;
   }
 
   .card {
-      top: 70px;
-      margin-bottom: 100px;
+    top: 70px;
+    margin-bottom: 100px;
   }
 
-  .left::after,
-  .right::after {
-      visibility: hidden;
+  .card:nth-of-type(odd)::after,
+  .card:nth-of-type(even)::after {
+    visibility: hidden;
   }
 
-  .left {
-      left: auto;
+  .card:nth-of-type(odd) {
+    left: auto;
   }
 
-  .right {
-      left: auto;
+  .card:nth-of-type(even) {
+    left: auto;
   }
 
-  .left .thumbnail {
+  /* .card:nth-of-type(odd) .thumbnail {
       top: -70px;
       left: 75px;
-  }
+  } */
 
-  .right .thumbnail {
+  /* .card:nth-of-type(even) .thumbnail {
       top: -70px;
       left: 75px;
-  }
+  } */
 }
