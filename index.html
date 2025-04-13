@@ -7,6 +7,7 @@
   <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" href="images/favicons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/images/favicons/apple-icon-180x180.png">
+  <link rel="stylesheet" href="styles/variables.css">
   <link rel="stylesheet" href="styles/style.css">
   <link rel="stylesheet" href="styles/header.css">
   <link rel="stylesheet" href="styles/main.css">
@@ -19,10 +20,10 @@
     <nav class="nav">
       <ul class="nav__list nav__list_flex">
         <li class="nav__item">
-          <a class="logo neonText">TPOH</a>
+          <a class="logo text__neon">TPOH</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link link" href="pages/tron/tron.html">ТРОН</a>
+          <a class="nav__link" href="pages/tron/tron.html">ТРОН</a>
         </li>
         <li class="nav__item">
           <a class="nav__link" href="pages/tron_legacy/tron_legacy.html">ТРОН: Наследие</a>
@@ -56,12 +57,39 @@
           </ul>
 
         </li>
+
+        <li class="nav__item nav__item_dropmenu">
+          <input class="checkbox" type="checkbox" name="" id="" />
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="nav__list dropmenu">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Home</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">about</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">blogs</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">portfolio</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">contact</a>
+            </li>
+          </ul>
+        </li>
+
       </ul>
     </nav>
   </header>
 
-  <main class="main container">
-    <h1 class="title">Хронология вселенной <span class="tronText neonText">TPOH</span></h1>
+  <main class="main">
+    <h1 class="title">Хронология вселенной <span class="text__tron text__neon">TPOH</span></h1>
     <blockquote>
       <q><i>Я борюсь за пользователей.</i></q>
     </blockquote>
@@ -122,7 +150,8 @@
         <h2 class="heading">Трон: Призрак в машине</h2>
         <time class="time" datetime="2006">2006</time>
         <p class="caption">Комикс</p>
-        <img src="pages/tronTheGhostInTheMachine_comics/images/poster_1.webp" alt="Постер комикса Трон: Призрак в машине">
+        <img src="pages/tronTheGhostInTheMachine_comics/images/poster_1.webp"
+          alt="Постер комикса Трон: Призрак в машине">
       </a>
       <a class="card" href="pages/tronSpaceParanoids_game/tronSpaceParanoids_game.html">
         <h2 class="heading">Space Paranoids</h2>
@@ -164,13 +193,15 @@
         <h2 class="heading">Трон: Адаптация оригинального фильма №1</h2>
         <time class="time" datetime="2010">2010</time>
         <p class="caption">Комикс</p>
-        <img src="pages/tron_originalMovieAdaptation/chapter_1/images/poster_1.webp" alt="Постер комикса Трон: Адаптация оригинального фильма №1">
+        <img src="pages/tron_originalMovieAdaptation/chapter_1/images/poster_1.webp"
+          alt="Постер комикса Трон: Адаптация оригинального фильма №1">
       </a>
       <a class="card" href="pages/tron_originalMovieAdaptation/chapter_2/tron_originalMovieAdaptation.html">
         <h2 class="heading">Трон: Адаптация оригинального фильма №2</h2>
         <time class="time" datetime="2010">2010</time>
         <p class="caption">Комикс</p>
-        <img src="pages/tron_originalMovieAdaptation/chapter_2/images/poster_1.webp" alt="Постер комикса Трон: Адаптация оригинального фильма №2">
+        <img src="pages/tron_originalMovieAdaptation/chapter_2/images/poster_1.webp"
+          alt="Постер комикса Трон: Адаптация оригинального фильма №2">
       </a>
       <a class="card" href="pages/tron_evolution/tron_evolution.html">
         <h2 class="heading">Трон: Эволюция</h2>
