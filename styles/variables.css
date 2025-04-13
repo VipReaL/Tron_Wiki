@@ -1,0 +1,62 @@
+:root {
+  --text-family: "Oswald", sans-serif;
+  --text-tron: "Tr2n";
+  /* body */
+  --color-background: oklch(0.1 0.04 255);
+  --image-background: url(../images/bg.webp);
+
+  /* time */
+  --06s: 0.6s;
+
+  /* --text-header */
+  --text-size-tron: clamp(2.75rem, 2.204rem + 2.33vw, 5rem);
+  --text-size-header: clamp(2.25rem, -0.503rem + 2.293vw, 5rem);
+  --text-size-tron-4k: clamp(5rem, 1.246rem + 3.127vw, 8.75rem);
+  --text-size-header-4k: clamp(2.25rem, 0.748rem + 1.251vw, 3.75rem);
+
+  --color-text-header: oklch(0.94 0.0658 199.62);
+  --color-text-accent: oklch(0.67 0.17 226.38);
+
+  --color-text-accent-sh:
+    0 0 12px oklch(0.94 0.0658 199.62),
+    0 0 4px oklch(0.75 0.0876 215.73),
+    0 0 6px oklch(0.59 0.0953 226.14),
+    0 0 8px oklch(0.5 0.0841 227.2),
+    0 0 10px oklch(0.41 0.0745 234.07);
+
+  --color-text-shadow:
+    0 0 7px #8CFFFF,
+    0 0 10px #8CFFFF,
+    0 0 21px #8CFFFF,
+    0 0 42px #6DE0E9,
+    0 0 82px #44B0BF,
+    0 0 92px #238495,
+    0 0 102px #3EA6C4,
+    0 0 151px #01455A;
+
+  --colocr-keyframes-from:
+    0 0 7px #8CFFFF,
+    0 0 10px #8CFFFF,
+    0 0 21px #8CFFFF,
+    0 0 42px #6DE0E9,
+    0 0 82px #44B0BF,
+    0 0 92px #238495,
+    0 0 102px #3EA6C4,
+    0 0 151px #01455A;
+
+  --colocr-keyframes-to:
+    0 0 10px #8CFFFF,
+    0 0 15px #8CFFFF,
+    0 0 26px #8CFFFF,
+    0 0 48px #6DE0E9,
+    0 0 87px #44B0BF,
+    0 0 97px #238495,
+    0 0 107px #3EA6C4,
+    0 0 156px #01455A;
+
+  /* main */
+  --text-size: clamp(1.25rem, 1.098rem + 0.647vw, 1.875rem);
+  --text-size-4k: clamp(1.875rem, -0.628rem + 2.084vw, 4.375rem);
+
+  --color-text: oklch(1 0 0);
+}
