@@ -2,14 +2,15 @@
   --text-family: "Oswald", sans-serif;
   --text-tron: "Tr2n";
   /* body */
-  --color-background: oklch(0.1 0.04 255);
-  --image-background: url(../images/bg.webp);
+  --body-color-background: oklch(0.1 0.04 255);
+  --body-image-background: url(../images/bg.webp);
 
   /* time */
   --06s: 0.6s;
 
   /* glass */
   --color-glass-background: oklch(1 0 0 / 20%);
+  --color-glass-background-dropmenu: oklch(1 0 0 / 90%);
   --color-glass-shadow: oklch(0 0 0 / 10%);
   --color-glass-border: oklch(1 0 0 / 30%);
 
@@ -60,8 +61,11 @@
     0 0 156px #01455A;
 
   /* main */
+  --text-size-title: clamp(1.625rem, 1.322rem + 1.294vw, 2.875rem);
+  --text-size-title-4k: clamp(2.875rem, -1.75rem + 3.854vw, 7.5rem);
   --text-size: clamp(1.25rem, 1.098rem + 0.647vw, 1.875rem);
   --text-size-4k: clamp(1.875rem, -0.628rem + 2.084vw, 4.375rem);
 
   --color-text: oklch(1 0 0);
+  --color-background: oklch(0.94 0.0658 199.62);
 }

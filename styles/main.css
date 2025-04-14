@@ -5,45 +5,64 @@
   margin-top: 100px;
 }
 
+.title {
+  font-family: var(--text-family);
+  font-size: var(--text-size-title);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text);
+}
+
+.title .text__tron {
+  font-size: var(--text-size-title);
+}
+
 .container__timeline {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  z-index: -1;
+  margin-block: 50px;
+  margin-inline: 50px;
 }
 
 /* центральная линия start */
-.center-line {
+.center__line {
   position: absolute;
+  top: -30px;
   left: 50%;
-  height: 100%;
-  width: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 100px;
   transform: translateX(-50%);
-  background-color: #8CFFFF;
+  width: 6px;
+  height: 100%;
+  border-top: none;
+  border-bottom: none;
+  border-radius: 0;
 }
 
-.center-line::before {
+.center__line::before {
   position: absolute;
   content: "";
-  top: -25px;
-  left: -12px;
-  width: 20px;
-  height: 20px;
+  top: -27px;
+  left: -11px;
+  width: 25px;
+  height: 25px;
+  backdrop-filter: blur(5px);
+  background: var(--color-glass-background);
+  border: 1px solid var(--color-glass-border);
   border-radius: 50%;
-  border: 4px solid #8CFFFF;
 }
 
-.center-line::after {
+.center__line::after {
   position: absolute;
   content: "";
-  bottom: -25px;
-  right: -12px;
-  width: 20px;
-  height: 20px;
+  bottom: -27px;
+  right: -11px;
+  width: 25px;
+  height: 25px;
+  backdrop-filter: blur(5px);
+  background: var(--color-glass-background);
+  border: 1px solid var(--color-glass-border);
   border-radius: 50%;
-  border: 4px solid #8CFFFF;
 }
 
 /* центральная линия end */
@@ -51,19 +70,20 @@
 /* позиционирование карточки starrt */
 .card {
   position: relative;
-  display: block;
-  width: 300px;
-  height: 200px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
   text-decoration: none;
-  margin-bottom: 50px;
+  margin-block-end: 10px;
 }
 
 .card:nth-of-type(odd) {
-  left: -250px;
+  left: -300px;
 }
 
 .card:nth-of-type(even) {
-  left: 250px;
+  left: 300px;
 }
 
 /* позиционирование карточки end */
@@ -73,19 +93,22 @@
 .card:nth-of-type(even)::after {
   content: '';
   position: absolute;
-  width: 100px;
-  height: 2px;
-  background-color: #8CFFFF;
+  width: 90px;
+  height: 3px;
+  backdrop-filter: blur(5px);
+  background: var(--color-glass-background);
+  border-top: 1px solid var(--color-glass-border);
+  border-bottom: 1px solid var(--color-glass-border);
 }
 
 .card:nth-of-type(odd)::after {
-  top: 21px;
-  right: -100px;
+  top: 50px;
+  right: -91px;
 }
 
 .card:nth-of-type(even)::after {
-  top: 21px;
-  left: -100px;
+  top: 50px;
+  left: -91px;
 }
 
 /* горизонтальная палка end */
@@ -97,109 +120,84 @@
   position: absolute;
   width: 15px;
   height: 15px;
+  backdrop-filter: blur(5px);
+  background: var(--color-glass-background);
+  border: 1px solid var(--color-glass-border);
   border-radius: 50%;
-  background-color: #8CFFFF;
 }
 
 .card:nth-of-type(odd)::before {
-  top: 16px;
-  right: -107px;
+  top: 44px;
+  right: -108px;
 }
 
 .card:nth-of-type(even)::before {
-  top: 16px;
-  left: -107px;
+  top: 44px;
+  left: -108px;
 }
 
 /* точка end */
 
-.heading {
-  font-size: 1rem;
-  margin: 0;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  border-radius: 10px 10px 0 0;
-  color: red;
-  background-color: #8CFFFF;
-}
-
 .time {
   position: absolute;
-  top: -10px;
-  color: white;
-  font-size: 20px;
+  top: 12px;
+  color: var(--color-text);
+  font-size: var(--text-size);
   font-weight: 400;
 }
 
 .card:nth-of-type(odd) .time {
-  right: -65px;
+  right: -75px;
 }
 
 .card:nth-of-type(even) .time {
-  left: -65px;
+  left: -75px;
 }
 
-.caption {
-  background: rgba(140, 255, 255, 0.35);
-  border-radius: 6px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(6px);
-  border: 1px solid rgba(140, 255, 255, 0.2);
-
-  position: absolute;
-
+.figure {
+  margin: 0;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.image {
+  display: block;
+  width: 95%;
+  height: 97%;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 16px;
+}
+
+.caption {
+  position: absolute;
+  top: 19px;
   margin: 0;
-  padding: 1px 5px 5px 5px;
-
-  color: white;
+  padding: 1px 7px 7px 7px;
+  font-size: var(--text-size);
+  color: var(--color-text);
   text-transform: lowercase;
-  font-size: 18px;
+  letter-spacing: 2px;
 }
 
-.card img {
-  width: 100%;
+.card:nth-of-type(odd) .caption {
+  right: 21px;
 }
 
-@media screen and (max-width:790px) {
-  /* body {
-    text-align: center;
-    padding: 0 10px;
-  } */
+.card:nth-of-type(even) .caption {
+  left: 21px;
+}
 
-  /* .center-line {
-    height: 1550px;
-  } */
+@media (max-width: 1090px) {}
 
-  /* .card {
-    top: 70px;
-    margin-bottom: 100px;
-  } */
+@media (min-width: 1921px) {
+  .title {
+    font-size: var(--text-size-title-4k);
+  }
 
-  /* .card:nth-of-type(odd)::after,
-  .card:nth-of-type(even)::after {
-    visibility: hidden;
-  } */
-
-  /* .card:nth-of-type(odd) {
-    left: auto;
-  } */
-
-  /* .card:nth-of-type(even) {
-    left: auto;
-  } */
-
-  /* .card:nth-of-type(odd) .thumbnail {
-      top: -70px;
-      left: 75px;
-  } */
-
-  /* .card:nth-of-type(even) .thumbnail {
-      top: -70px;
-      left: 75px;
-  } */
+  .title .text__tron {
+    font-size: var(--text-size-title-4k);
+  }
 }

@@ -1,0 +1,12 @@
+.main {
+  margin-top: 100px;
+}
+
+.title {
+  font-family: var(--text-family);
+  font-size: var(--text-size-title);
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-text);
+}
