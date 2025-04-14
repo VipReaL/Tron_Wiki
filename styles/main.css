@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-
   margin-top: 100px;
 }
 
@@ -167,32 +166,32 @@
 }
 
 @media screen and (max-width:790px) {
-  body {
+  /* body {
     text-align: center;
     padding: 0 10px;
-  }
+  } */
 
-  .center-line {
+  /* .center-line {
     height: 1550px;
-  }
+  } */
 
-  .card {
+  /* .card {
     top: 70px;
     margin-bottom: 100px;
-  }
+  } */
 
-  .card:nth-of-type(odd)::after,
+  /* .card:nth-of-type(odd)::after,
   .card:nth-of-type(even)::after {
     visibility: hidden;
-  }
+  } */
 
-  .card:nth-of-type(odd) {
+  /* .card:nth-of-type(odd) {
     left: auto;
-  }
+  } */
 
-  .card:nth-of-type(even) {
+  /* .card:nth-of-type(even) {
     left: auto;
-  }
+  } */
 
   /* .card:nth-of-type(odd) .thumbnail {
       top: -70px;

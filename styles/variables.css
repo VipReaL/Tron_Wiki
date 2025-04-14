@@ -8,6 +8,11 @@
   /* time */
   --06s: 0.6s;
 
+  /* glass */
+  --color-glass-background: oklch(1 0 0 / 20%);
+  --color-glass-shadow: oklch(0 0 0 / 10%);
+  --color-glass-border: oklch(1 0 0 / 30%);
+
   /* --text-header */
   --text-size-tron: clamp(2.75rem, 2.204rem + 2.33vw, 5rem);
   --text-size-header: clamp(1.25rem, 1.007rem + 1.036vw, 2.25rem);
