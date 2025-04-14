@@ -10,7 +10,7 @@
 
   /* --text-header */
   --text-size-tron: clamp(2.75rem, 2.204rem + 2.33vw, 5rem);
-  --text-size-header: clamp(2.25rem, -0.503rem + 2.293vw, 5rem);
+  --text-size-header: clamp(1.25rem, 1.007rem + 1.036vw, 2.25rem);
   --text-size-tron-4k: clamp(5rem, 1.246rem + 3.127vw, 8.75rem);
   --text-size-header-4k: clamp(2.25rem, 0.748rem + 1.251vw, 3.75rem);
 

@@ -19,7 +19,7 @@
   <header class="header">
     <nav class="nav">
       <ul class="nav__list nav__list_flex">
-        <li class="nav__item">
+        <li class="nav__item nav__item_logo">
           <a class="logo text__neon">TPOH</a>
         </li>
         <li class="nav__item">
@@ -32,33 +32,46 @@
           <a class="nav__link" href="pages/tron_ares/tron_ares.html">ТРОН: Арес</a>
         </li>
         <li class="nav__item nav__item_dropmenu">
-          <a class="nav__link nav__link_dropmenu" href="pages/tron_universe/tron_universe.html">Вселенная ТРОНА</a>
-
+          <a class="nav__link nav__link_dropmenu-arrow" href="pages/tron_universe/tron_universe.html">Вселенная ТРОНА</a>
           <ul class="nav__list dropmenu">
             <li class="nav__item">
-              <a class="nav__link" href="#">Фильмы</a>
+              <a class="nav__link" href="https://tron.fandom.com/wiki/Category:Characters" target="_blank" rel="noopener noreferrer">Персонажи</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="https://tron.fandom.com/wiki/Category:Vehicles" target="_blank" rel="noopener noreferrer">Транспорт</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="https://tron.fandom.com/wiki/Category:Locations" target="_blank" rel="noopener noreferrer">Локации</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="https://tron.fandom.com/wiki/Category:Weapons" target="_blank" rel="noopener noreferrer">Оружие</a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav__item nav__item_dropmenu">
+          <a class="nav__link nav__link_dropmenu-arrow" href="pages/media_files/media_files.html">Медиафайлы</a>
+          <ul class="nav__list dropmenu">
+            <li class="nav__item">
+              <a class="nav__link" href="#">Мультфильмы</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Журналы</a>
             </li>
             <li class="nav__item">
               <a class="nav__link" href="#">Комиксы</a>
             </li>
-          </ul>
-
-        </li>
-        <li class="nav__item nav__item_dropmenu">
-          <a class="nav__link nav__link_dropmenu" href="pages/media_files/media_files.html">Медиафайлы</a>
-
-          <ul class="nav__list dropmenu">
             <li class="nav__item">
               <a class="nav__link" href="#">Фильмы</a>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">Комиксы</a>
+              <a class="nav__link" href="#">Книги</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link" href="#">Игры</a>
             </li>
           </ul>
-
         </li>
-
-        <li class="nav__item nav__item_dropmenu">
+        <li class="nav__item nav__item_dropmenu hamburger">
           <input class="checkbox" type="checkbox" name="" id="" />
           <div class="hamburger-lines">
             <span class="line line1"></span>
@@ -66,24 +79,18 @@
             <span class="line line3"></span>
           </div>
           <ul class="nav__list dropmenu">
+             <p class="color__theme">цветовая темя</p>
             <li class="nav__item">
-              <a class="nav__link" href="#">Home</a>
+              <button class="button">Трон 1982</button>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">about</a>
+              <button class="button">Трон: Наследие</button>
             </li>
             <li class="nav__item">
-              <a class="nav__link" href="#">blogs</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">portfolio</a>
-            </li>
-            <li class="nav__item">
-              <a class="nav__link" href="#">contact</a>
+              <button class="button">Трон: Арес</button>
             </li>
           </ul>
         </li>
-
       </ul>
     </nav>
   </header>
@@ -259,6 +266,8 @@
   <footer class="footer">
 
   </footer>
+
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>
