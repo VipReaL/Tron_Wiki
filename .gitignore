@@ -5,6 +5,8 @@
 
 source
 .DS_Store
+server/
+
 
 # User-specific files
 *.rsuser
