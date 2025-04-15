@@ -1,0 +1,1 @@
+export const containerTimeline = document.querySelector('.container__timeline');

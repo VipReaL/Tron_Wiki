@@ -10,7 +10,7 @@
 
   /* glass */
   --color-glass-background: oklch(1 0 0 / 20%);
-  --color-glass-background-dropmenu: oklch(1 0 0 / 20%);
+  --color-glass-background-dropmenu: oklch(1 0 0 / 30%);
   --color-glass-shadow: oklch(0 0 0 / 10%);
   --color-glass-border: oklch(1 0 0 / 30%);
 

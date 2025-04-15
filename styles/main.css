@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-grow: 1;
+  flex-basis: content;
   margin-top: 100px;
   margin-inline: 20px;
 }
@@ -20,11 +22,8 @@
 }
 
 .container__timeline {
-  display: flex;
-  flex-direction: column;
   position: relative;
-  margin-block: 50px;
-  margin-inline: 50px;
+  margin-block: 60px;
 }
 
 /* центральная линия start */
@@ -148,7 +147,7 @@
 }
 
 .card:nth-of-type(odd) .time {
-  right: -75px;
+  left: 425px;
 }
 
 .card:nth-of-type(even) .time {
@@ -181,7 +180,7 @@
   position: absolute;
   top: 19px;
   margin: 0;
-  padding: 1px 7px 7px 7px;
+  padding: 0 7px 7px 7px;
   font-size: var(--text-size);
   color: var(--color-text);
   text-transform: lowercase;
@@ -189,14 +188,131 @@
 }
 
 .card:nth-of-type(odd) .caption {
-  right: 21px;
+  left: 21px;
 }
 
 .card:nth-of-type(even) .caption {
   left: 21px;
 }
 
-@media (max-width: 1090px) {}
+@media (max-width: 1090px) {
+
+  /* центральная линия start */
+  .center__line {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  /* центральная линия end */
+
+  /* позиционирование карточки starrt */
+  .card {
+    width: 300px;
+    height: 450px;
+  }
+
+  .card:nth-of-type(odd) {
+    left: 104px;
+  }
+
+  .card:nth-of-type(even) {
+    left: 104px;
+  }
+
+  /* позиционирование карточки end */
+
+  /* горизонтальная палка start */
+  .card:nth-of-type(odd)::after {
+    left: -91px;
+  }
+
+  /* горизонтальная палка end */
+
+  /* точка start */
+  .card:nth-of-type(odd)::before {
+    left: -108px;
+  }
+
+  /* точка end */
+
+  .card:nth-of-type(odd) .time {
+    left: -75px;
+  }
+
+}
+
+@media (max-width: 560px) {
+
+  /* центральная линия start */
+  .center__line {
+    left: 0;
+    transform: translateX(0);
+  }
+
+  /* центральная линия end */
+
+  .card {
+    width: 200px;
+    height: 300px;
+  }
+
+  .card:nth-of-type(odd) {
+    left: 60px;
+  }
+
+  .card:nth-of-type(even) {
+    left: 60px;
+  }
+
+  /* позиционирование карточки end */
+
+  /* горизонтальная палка start */
+  .card:nth-of-type(odd)::after,
+  .card:nth-of-type(even)::after {
+    width: 49px;
+  }
+
+  .card:nth-of-type(odd)::after {
+    left: -49px;
+  }
+
+  .card:nth-of-type(even)::after {
+    left: -49px;
+  }
+
+  /* горизонтальная палка end */
+  
+  /* точка start */
+  .card:nth-of-type(odd)::before {
+    left: -64px;
+  }
+
+  .card:nth-of-type(even)::before {
+    left: -64px;
+  }
+
+  /* точка end */
+
+  .card:nth-of-type(odd) .time {
+    left: -45px;
+  }
+
+  .card:nth-of-type(even) .time {
+    left: -45px;
+  }
+
+  .caption {
+    top: 10px;
+  }
+
+  .card:nth-of-type(odd) .caption {
+    left: 10px;
+  }
+
+  .card:nth-of-type(even) .caption {
+    left: 10px;
+  }
+}
 
 @media (min-width: 1921px) {
   .title {
