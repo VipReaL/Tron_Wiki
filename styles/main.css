@@ -8,19 +8,6 @@
   margin-inline: 20px;
 }
 
-.title {
-  font-family: var(--text-family);
-  font-size: var(--text-size-title);
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--color-text);
-}
-
-.title .text__tron {
-  font-size: var(--text-size-title);
-}
-
 .container__timeline {
   position: relative;
   margin-block: 60px;
@@ -141,9 +128,6 @@
 .time {
   position: absolute;
   top: 12px;
-  color: var(--color-text);
-  font-size: var(--text-size);
-  font-weight: 400;
 }
 
 .card:nth-of-type(odd) .time {
@@ -155,6 +139,7 @@
 }
 
 .figure {
+  position: relative;
   margin: 0;
   width: 100%;
   display: flex;
@@ -168,7 +153,7 @@
   height: 96%;
   object-fit: cover;
   object-position: center center;
-  border-radius: 16px;
+  border-radius: var(--radius-medium);
   transition: transform .3s;
 }
 
@@ -178,21 +163,20 @@
 
 .caption {
   position: absolute;
-  top: 19px;
+  top: 21px;
   margin: 0;
   padding: 0 7px 7px 7px;
-  font-size: var(--text-size);
-  color: var(--color-text);
   text-transform: lowercase;
   letter-spacing: 2px;
+  border-radius: var(--radius-small);
 }
 
 .card:nth-of-type(odd) .caption {
-  left: 21px;
+  left: 20px;
 }
 
 .card:nth-of-type(even) .caption {
-  left: 21px;
+  left: 20px;
 }
 
 @media (max-width: 1090px) {
@@ -237,6 +221,18 @@
 
   .card:nth-of-type(odd) .time {
     left: -75px;
+  }
+
+  .caption {
+    top: 13px;
+  }
+  
+  .card:nth-of-type(odd) .caption {
+    left: 13px;
+  }
+  
+  .card:nth-of-type(even) .caption {
+    left: 13px;
   }
 
 }
@@ -311,15 +307,5 @@
 
   .card:nth-of-type(even) .caption {
     left: 10px;
-  }
-}
-
-@media (min-width: 1921px) {
-  .title {
-    font-size: var(--text-size-title-4k);
-  }
-
-  .title .text__tron {
-    font-size: var(--text-size-title-4k);
   }
 }

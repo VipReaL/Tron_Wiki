@@ -25,22 +25,14 @@
   gap: 20px;
 }
 
-.logo {
-  display: block;
-  padding-top: 18px;
-  font-family: var(--text-tron);
-  font-size: var(--text-size-tron);
-  font-weight: 200;
-  font-style: normal;
-  text-decoration: none;
-  user-select: none;
-  text-transform: uppercase;
-  transition: color var(--06s);
+p.logo {
+  pointer-events: none;
 }
 
-.logo:hover {
-  /* FIXME: */
-  color: var(--color-text-accent);
+.logo {
+  display: block;
+  margin: 0;
+  padding-top: 18px;
 }
 
 .nav__link {
@@ -51,25 +43,6 @@
   padding: 0;
   border: none;
   background-color: transparent;
-}
-
-.nav__item .nav__link,
-.button {
-  display: block;
-  user-select: none;
-  font-family: var(--text-family);
-  font-size: var(--text-size-header);
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-  color: var(--color-text-header);
-  text-shadow: var(--color-text-accent-sh);
-  transition: text-shadow var(--06s);
-}
-
-.nav__link:hover,
-.button:hover {
-  text-shadow: var(--color-text-shadow);
 }
 
 /* стрелка start */
@@ -86,7 +59,7 @@
   border-top: 8px solid var(--color-text-header);
   transform-origin: 50% 40%;
   transition-property: rotate;
-  transition-duration: 0.4s;
+  transition-duration: var(--second-3);
   transition-delay: 0.1s;
   transition-timing-function: ease;
 }
@@ -139,8 +112,8 @@
   background: var(--color-glass-background-dropmenu);
   box-shadow: inset 0 0 0 3000px var(--color-glass-shadow);
   border: 1px solid var(--color-glass-border);
-  backdrop-filter: blur(5px);
-  border-radius: 16px;
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: var(--radius-large);
 }
 
 .checkbox {
@@ -227,12 +200,8 @@
   }
 }
 
-@media (min-width: 1921px) {
-  .logo {
-    font-size: var(--text-size-tron-4k);
-  }
-
-  .nav__link {
-    font-size: var(--text-size-header-4k);
+@media (min-width: 2561px) {
+  .dropmenu::before {
+    top: 70px;
   }
 }
