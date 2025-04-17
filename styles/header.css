@@ -64,13 +64,14 @@ p.logo {
   transition-timing-function: ease;
 }
 
-.nav__item:hover .dropmenu-arrow::after {
+
+:where(.nav__item:hover, .is__open) .dropmenu-arrow::after {
   rotate: 180deg;
 }
 
 /* стрелка end */
 
-/* dropmenu-checkbox start */
+/* dropmenu start */
 .nav__item_dropmenu {
   position: relative;
 }
@@ -97,7 +98,7 @@ p.logo {
   padding-block-start: 15px;
 }
 
-.nav__item:hover .dropmenu {
+:is(.nav__item:hover, .is__open) .dropmenu {
   display: block;
 }
 
@@ -116,20 +117,6 @@ p.logo {
   border-radius: var(--radius-large);
 }
 
-.checkbox {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
-  height: 40px;
-  width: 40px;
-  margin: 0;
-  z-index: 1;
-  opacity: 0;
-  cursor: pointer;
-}
-
 .hamburger-lines {
   display: block;
   height: 26px;
@@ -145,42 +132,39 @@ p.logo {
   width: 100%;
   border-radius: 10px;
   background: var(--color-text-header);
+  box-shadow: var(--color-text-shadow);
 }
 
-.hamburger-lines .line1 {
+.line1 {
   transform-origin: 0% 0%;
   transition: transform 0.3s ease-in-out;
 }
 
-.hamburger-lines .line2 {
+.line2 {
   transition: transform 0.2s ease-in-out;
 }
 
-.hamburger-lines .line3 {
+.line3 {
   transform-origin: 0% 100%;
   transition: transform 0.3s ease-in-out;
 }
 
-.checkbox[type="checkbox"]:checked~.dropmenu {
-  display: block;
-}
-
 .nav__item:hover .line1,
-.checkbox[type="checkbox"]:checked~.hamburger-lines .line1 {
+.is__open .line1 {
   transform: rotate(45deg);
 }
 
 .nav__item:hover .line2,
-.checkbox[type="checkbox"]:checked~.hamburger-lines .line2 {
+.is__open .line2 {
   transform: scaleY(0);
 }
 
 .nav__item:hover .line3,
-.checkbox[type="checkbox"]:checked~.hamburger-lines .line3 {
+.is__open .line3 {
   transform: rotate(-45deg);
 }
 
-/* dropmenu-checkbox end */
+/* dropmenu end */
 
 @media (max-width: 639px) {
   .nav__item_dropmenu:not(.hamburger) {

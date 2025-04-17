@@ -1,6 +1,7 @@
-import { containerTimeline } from "./scripts/variables.mjs";
+import { containerTimeline, itemDropmenu } from "./scripts/variables.mjs";
 import { getCardInformation, getCardInformationJSON } from "./scripts/api.mjs";
 import { createCard } from "./scripts/card.mjs";
+import { closeDropmenu, toggleDropdown } from "./scripts/dropmenu.mjs";
 
 // Функция добавления карточек в разметку
 function addCard(markupCard) {
@@ -50,3 +51,27 @@ getCardInformation()
 //     console.log(error);
 //   })
 // TODO: Test end
+
+// Открываем - закрываем выпадающее меню
+itemDropmenu.forEach(item => {
+  const dropmenu = item;
+  const button = item.querySelector('.button');
+
+  button.addEventListener('click', function (event) {
+    itemDropmenu.forEach(item => {
+      if (!item.contains(event.target)) {
+        item.classList.remove('is__open');
+      }
+    });
+    toggleDropdown(dropmenu);
+  });
+
+  item.addEventListener('keydown', function (event) {
+    if (event.code === 'Escape') {
+      toggleDropdown(dropmenu);
+    }
+  });
+});
+
+// Закрываем выпадающее меню, если кликнули не внём
+window.addEventListener('click', closeDropmenu);
