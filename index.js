@@ -75,3 +75,11 @@ itemDropmenu.forEach(item => {
 
 // Закрываем выпадающее меню, если кликнули не внём
 window.addEventListener('click', closeDropmenu);
+
+// Год в footer
+function year() {
+  let year = document.querySelector("#year");
+  year.innerText = new Date().getFullYear();
+}
+
+year();
