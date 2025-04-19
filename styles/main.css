@@ -128,6 +128,7 @@
 .time {
   position: absolute;
   top: 12px;
+  text-shadow: var(--color-text-shadow);
 }
 
 .card:nth-of-type(odd) .time {
@@ -169,6 +170,7 @@
   text-transform: lowercase;
   letter-spacing: 2px;
   border-radius: var(--radius-small);
+  text-shadow: var(--color-text-shadow);
 }
 
 .card:nth-of-type(odd) .caption {

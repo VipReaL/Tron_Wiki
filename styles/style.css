@@ -31,6 +31,19 @@ html {
   border-radius: var(--radius-large);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .text__logo {
   font-family: var(--text-tron);
   font-size: var(--text-size-tron);
@@ -80,7 +93,6 @@ html {
   font-weight: 300;
   font-style: normal;
   color: var(--color-text);
-  text-shadow: var(--color-text-shadow);
 }
 
 .text__tron {
