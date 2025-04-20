@@ -50,6 +50,7 @@
   --text-size-4k: clamp(1.875rem, -0.628rem + 2.084vw, 4.375rem);
   
   --color-text: oklch(1 0 0);
+  --color-text-pale: oklch(1 0 0 / .7);
 
   /* Tron: Ares */
 
