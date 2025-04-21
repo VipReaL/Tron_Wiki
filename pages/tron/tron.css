@@ -182,7 +182,7 @@
   /* задаёт высоту контейнера для 16:9 (если 4:3 — поставьте 75%) */
   height: 0;
   overflow: hidden;
-  
+
 }
 
 .contentCard__trailer-wrapper::after {
@@ -192,7 +192,7 @@
   left: 0;
   width: 20%;
   height: 100%;
-  background: linear-gradient(90deg,rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0) 100%);
 }
 
 .contentCard__trailer-iframe {
@@ -231,13 +231,42 @@ p {
 }
 
 .footer {
-
-  padding: 2rem;
-  background: purple;
-  color: white;
-  font-weight: 500;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.2rem;
+  justify-content: space-between;
+  align-items: end;
+  margin: 20px;
+}
+
+.footer__bike__1 {
+  position: relative;
+  width: 150px;
+  z-index: 1;
+}
+
+.footer__bike__img {
+  height: 94px;
+}
+
+.footer__bike__strip {
+  height: 66px;
+  margin-block-end: 5px;
+  flex-grow: 1;
+  border-radius: 50px;
+  background: linear-gradient(90deg, 
+    rgba(255 0 0 / .8) 0%, 
+    rgba(0 173 238 / .3) 100%)
+  ;
+  backdrop-filter: brightness(200%) contrast(300%) blur(15px);
+}
+
+.footer__text {
+  flex-grow: 1;
+  text-align: center;
+
+}
+
+.footer__bike__2 {
+  position: relative;
+  width: 150px;
+  transform: rotateY(180deg);
 }
