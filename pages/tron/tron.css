@@ -15,19 +15,20 @@
   flex-grow: 1;
 }
 
-.title {
+/* .title {
   font-family: var(--text-family);
   font-size: var(--text-size-title);
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
   color: var(--color-text);
-}
+} */
 
 /* contentCard start */
 .contentCard {
   position: relative;
   background-color: rgb(0, 0, 0);
+  margin-block-end: 50px;
 }
 
 /* contentCard__nav-wrapper start */
@@ -208,27 +209,88 @@
 /* contentCard__trailer-wrapper end */
 /* contentCard end */
 
-.datalist {
+/* .datalist {
   font-family: var(--text-family);
   font-size: var(--text-size);
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   color: var(--color-text);
-}
+} */
 
-.datalist__summary {
+/* .datalist__summary {
   font-family: var(--text-family);
   font-size: var(--text-size);
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
   color: var(--color-text);
+} */
+
+/* p {
+  color: var(--color-text);
+} */
+
+/* sequels__prequels start */
+
+.sequels__prequels {
+  margin-block-end: 50px;
+}
+.sequels__prequels__title {
+  text-align: center;
+}
+.sequels__prequels__container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.card {
+  padding: 10px;
+}
+.card__link {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  justify-content: space-between;
+  gap: 5px;
+}
+.card__title {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.card__picture {
+  order: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__image {
+  max-height: 500px;
+  /* width: 100%; */
+  min-width: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 6px 6px 0 0;
+}
+.card__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card__time {
+  color: var(--color-text-pale);
+}
+.card__text {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  color: var(--color-text-pale);
 }
 
-p {
-  color: var(--color-text);
-}
+/* sequels__prequels end */
 
 .footer {
   display: flex;
