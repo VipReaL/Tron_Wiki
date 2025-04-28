@@ -1,10 +1,3 @@
-const config = {
-  baseUrl: 'https://vipreal.github.io/apijson',
-  headers: {
-    'Content-Type': 'application/json'
-  }
-}
-
 function getResponseData(res) {
   if (!res.ok) {
     return Promise.reject(`Ошибка: ${res.status}`);
@@ -13,8 +6,8 @@ function getResponseData(res) {
 }
 
 // Загрузка информации о карточках с сервера
-const getCardInformation = () => {
-  return fetch(`${config.baseUrl}/tron_api.json`)
+const getCardInformation = (URL, OPTIONS) => {
+  return fetch(URL, OPTIONS)
     .then(res => getResponseData(res))
 }
 

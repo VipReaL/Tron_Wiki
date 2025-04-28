@@ -1,1 +1,3 @@
-console.log('ghbdtn');
+import { year } from "../../scripts/year.mjs"
+
+year();
